@@ -10,42 +10,32 @@ public class Calculator {
 
 	public int add(int a, int b) { // add method
 
-		int sum = a + b;
-
-		return sum;
+		return a + b;
 
 	}
 
 	public int subtract(int a, int b) { // subtract method
 
-		int minus = a - b;
-
-		return minus;
+		return a - b;
 
 	}
 
 	public int multiply(int a, int b) { // multiply method
 
-		int product = a * b;
-
-		return product;
+		return a * b;
 
 	}
 
 //divide method
 	public int divide(int a, int b) {
 
-		int divided = a / b;
-
-		return divided;
+		return a / b;
 
 	}
 
 	public int modulo(int a, int b) { // modulus method
 
-		int modulus = a % b;
-
-		return modulus;
+		return a % b;
 
 	}
 
@@ -56,12 +46,12 @@ public class Calculator {
 		}
 		System.out.println("\n");
 		System.out.println("\t" + "\t" + "\tJava Calculator");
-		System.out.println("");
+		System.out.println();
 		for (int x = 0; x <= 60; x++) {
 			System.out.print("*");
 
 		}
-		System.out.println("");
+		System.out.println();
 
 		return null;
 
@@ -88,39 +78,24 @@ public class Calculator {
 
 		int secondEntry = input.nextInt(); // Read second integer entry
 
-		int selection = mathOperation;
+		switch (mathOperation) { // Case block will run depending on the math operation that the user selected
 
-		switch (selection) { // Case block will run depending on the math operation that the user selected
-
-		case 1:
-			System.out.println("We will  add " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
-					+ secondEntry + " = " + (firstEntry + secondEntry)); // Addition switch case
-
-			break;
-
-		case 2:
-			System.out.println("We will  subtract " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
-					+ secondEntry + " = " + (firstEntry - secondEntry)); // Subtraction switch case
-			break;
-
-		case 3:
-			System.out.println("We will multiply " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
-					+ secondEntry + " = " + (firstEntry * secondEntry)); // Multiplication switch case
-			break;
-
-		case 4:
-			System.out.println("We will divide " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
-					+ secondEntry + " = " + (firstEntry / secondEntry)); // Division switch case
-			break;
-
-		case 5:
-			System.out.println("We will get the remainder of " + firstEntry + " and " + secondEntry + ": " + +firstEntry
-					+ " + " + secondEntry + " = " + (firstEntry % secondEntry)); // modulus switch case
-			break;
-
-		default:
-			System.out.println("Please enter a valid selection to begin arithmetic operations");
-
+			case 1 ->
+					System.out.println("We will add " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
+							+ secondEntry + " = " + (firstEntry + secondEntry)); // Addition switch case
+			case 2 ->
+					System.out.println("We will subtract " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
+							+ secondEntry + " = " + (firstEntry - secondEntry)); // Subtraction switch case
+			case 3 ->
+					System.out.println("We will multiply " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
+							+ secondEntry + " = " + (firstEntry * secondEntry)); // Multiplication switch case
+			case 4 ->
+					System.out.println("We will divide " + firstEntry + " and " + secondEntry + ": " + +firstEntry + " + "
+							+ secondEntry + " = " + (firstEntry / secondEntry)); // Division switch case
+			case 5 ->
+					System.out.println("We will get the remainder of " + firstEntry + " and " + secondEntry + ": " + +firstEntry
+							+ " + " + secondEntry + " = " + (firstEntry % secondEntry)); // modulus switch case
+			default -> System.out.println("Please enter a valid selection to begin arithmetic operations");
 		}
 
 		System.out.println("\nThank you for using the java calculator!");
