@@ -4,50 +4,15 @@ import java.util.Scanner;
 remainder of two numbers */
 public class Calculator {
 
-	public Calculator() {// Calculator constructor
-
-	}
-
-	public int add(int a, int b) { // add method
-
-		return a + b;
-
-	}
-
-	public int subtract(int a, int b) { // subtract method
-
-		return a - b;
-
-	}
-
-	public int multiply(int a, int b) { // multiply method
-
-		return a * b;
-
-	}
-
-//divide method
-	public int divide(int a, int b) {
-
-		return a / b;
-
-	}
-
-	public int modulo(int a, int b) { // modulus method
-
-		return a % b;
-
-	}
-
 	public String header() { // header() method
 
-		for (int x = 0; x <= 60; x++) {
+		for (int x = 0; x <= 40; x++) {
 			System.out.print("*");
 		}
 		System.out.println("\n");
 		System.out.println("\t" + "\t" + "\tJava Calculator");
 		System.out.println();
-		for (int x = 0; x <= 60; x++) {
+		for (int x = 0; x <= 40; x++) {
 			System.out.print("*");
 
 		}
@@ -67,7 +32,7 @@ public class Calculator {
 
 		Scanner input = new Scanner(System.in); // Create a Scanner object
 
-		System.out.println("    Enter 1 for +, 2 for -, 3 for *, 4 for /, and 5 for % ");
+		System.out.println("Enter 1 for +, 2 for -, 3 for *, 4 for /, and 5 for % ");
 		int mathOperation = input.nextInt(); // Read user input
 
 		System.out.println("What is the first value that you would like to enter?");
